@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "iocpLibModuleTester", "iocpLibModuleTester\iocpLibModuleTester.vcxproj", "{A21C47C4-EAF7-4D5D-8B25-94EDDDE665CD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{06CBD282-EF0A-482D-A9AF-65726140C7E2} = {06CBD282-EF0A-482D-A9AF-65726140C7E2}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "iocpLib", "iocpLib", "{587AB55B-C0C6-4D4E-AA41-86F998AB2699}"
 EndProject
