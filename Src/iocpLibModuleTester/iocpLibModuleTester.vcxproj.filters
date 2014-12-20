@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Testers">
+      <UniqueIdentifier>{d586f83d-b56a-4d53-866d-14b17051e125}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Testers\Singleton">
+      <UniqueIdentifier>{9fec9b8f-7f13-42f7-bcb7-ba4aeeabceef}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -31,6 +37,9 @@
     </ClCompile>
     <ClCompile Include="iocpLibModuleTester.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Test_Singleton.cpp">
+      <Filter>Testers\Singleton</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

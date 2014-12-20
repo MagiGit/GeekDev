@@ -20,5 +20,5 @@
 #define _DMODE
 #endif
 
-
+#include "iocpLib.h"
 #pragma comment( lib, "iocpLib" _DMODE ".lib" )

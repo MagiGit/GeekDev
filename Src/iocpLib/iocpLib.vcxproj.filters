@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{231a5ee0-94cf-415d-b410-296e2eb9db98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IocpHandler">
+      <UniqueIdentifier>{e1c1ebd1-2e04-4210-86fa-17b1b727c02a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -24,10 +30,25 @@
     <ClInclude Include="targetver.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="iocpLib.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="cSingleTon.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="cIocpHandler.h">
+      <Filter>IocpHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="typedef.h">
+      <Filter>Common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="cIocpHandler.cpp">
+      <Filter>IocpHandler</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
