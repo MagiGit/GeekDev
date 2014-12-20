@@ -3,7 +3,7 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
     <IntermediateDir>..\_intermediate\$(ProjectName)\$(Configuration)\</IntermediateDir>
-    <LibOutDir>..\Lib\</LibOutDir>
+    <LibOutDir>..\_lib\</LibOutDir>
     <ExeOutDir>..\..\Bin\$(ProjectName)\</ExeOutDir>
   </PropertyGroup>
   <PropertyGroup />
