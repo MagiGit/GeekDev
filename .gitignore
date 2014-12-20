@@ -1,0 +1,5 @@
+ipch
+_intermediate
+*.opensdf
+*.sdf
+*.suo
