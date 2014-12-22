@@ -19,6 +19,9 @@
     <Filter Include="Testers\Singleton">
       <UniqueIdentifier>{9fec9b8f-7f13-42f7-bcb7-ba4aeeabceef}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Testers\Thread">
+      <UniqueIdentifier>{e3829ecf-ef68-4f26-8937-1ee7ece547a9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -40,6 +43,9 @@
     </ClCompile>
     <ClCompile Include="Test_Singleton.cpp">
       <Filter>Testers\Singleton</Filter>
+    </ClCompile>
+    <ClCompile Include="Test_Thread.cpp">
+      <Filter>Testers\Thread</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

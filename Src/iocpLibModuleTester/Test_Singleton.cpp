@@ -3,7 +3,6 @@
 using namespace std;
 
 class cTestSingleton
-    : public cSingleTon<cTestSingleton>
 {
 public:
     int value;
@@ -27,14 +26,14 @@ public:
 
 void Test_Singleton()
 {
-    cTestSingleton::Get().value = 200;
+    cSingleTon<cTestSingleton>::Get().value = 200;
 
-    cout << cTestSingleton::Get().value << endl;
+    cout << cSingleTon<cTestSingleton>::Get().value << endl;
 
-    cTestSingleton::Destroy();
+    cSingleTon<cTestSingleton>::Destroy();
 
-    cout << cTestSingleton::Get().value << endl;
+    cout << cSingleTon<cTestSingleton>::Get().value << endl;
 
-    cTestSingleton::Destroy();
-    cTestSingleton::Destroy();
+    cSingleTon<cTestSingleton>::Destroy();
+    cSingleTon<cTestSingleton>::Destroy();
 }

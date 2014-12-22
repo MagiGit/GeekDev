@@ -4,7 +4,9 @@
 #include <MSWSock.h>
 #include <Windows.h>
 #include <iostream>
+#include <strsafe.h>
 
 #pragma comment(lib, "ws2_32.lib")
 
+#include "typedef.h"
 #include "cSingleTon.h"

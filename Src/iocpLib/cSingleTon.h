@@ -4,6 +4,7 @@
 // Not ThreadSafe - 신경 쓸것...
 template< typename T >
 class cSingleTon
+    : public T
 {
 private:
     static std::unique_ptr<T> m_instance;

@@ -19,6 +19,9 @@
     <Filter Include="IocpHandler">
       <UniqueIdentifier>{e1c1ebd1-2e04-4210-86fa-17b1b727c02a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Common\Thread">
+      <UniqueIdentifier>{a0142d0a-6ced-4dde-a6ce-1c9d200ab00f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -42,6 +45,9 @@
     <ClInclude Include="typedef.h">
       <Filter>Common</Filter>
     </ClInclude>
+    <ClInclude Include="cThreadBase.h">
+      <Filter>Common\Thread</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -49,6 +55,9 @@
     </ClCompile>
     <ClCompile Include="cIocpHandler.cpp">
       <Filter>IocpHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="cThreadBase.cpp">
+      <Filter>Common\Thread</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
