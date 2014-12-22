@@ -35,14 +35,14 @@ bool cIocpHandler::Create( DWORD threadCount )
     return IsCreate();
 }
 
-bool cIocpHandler::RegistHandle( HANDLE handle, ULONG_PTR completionKey )
+bool cIocpHandler::RegistHandle( HANDLE handle, ULONG_PTR key )
 {
     if( IsCreate() == false )
     {
         return false;
     }
 
-    HANDLE hRet = CreateIoCompletionPort( handle, m_iocp, completionKey, 0 );
+    HANDLE hRet = CreateIoCompletionPort( handle, m_iocp, key, 0 );
     if( hRet == NULL )
     {
         DWORD errorCode = GetLastError();
