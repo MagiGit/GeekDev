@@ -25,6 +25,15 @@
     <Filter Include="cWSAData">
       <UniqueIdentifier>{a5cb396a-6eff-4f02-85c2-f9df9a9a3be1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Acceptor">
+      <UniqueIdentifier>{f7f3afde-75e0-4e37-b4ba-c461735b407f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\OverlappedEx">
+      <UniqueIdentifier>{3a15025b-ef4f-4fcd-b277-ffdc3a575647}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SessionNode">
+      <UniqueIdentifier>{b060c754-271a-4919-aa07-41f07937b687}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -54,6 +63,12 @@
     <ClInclude Include="cWSAData.h">
       <Filter>cWSAData</Filter>
     </ClInclude>
+    <ClInclude Include="cAcceptor.h">
+      <Filter>Acceptor</Filter>
+    </ClInclude>
+    <ClInclude Include="iSessionNode.h">
+      <Filter>SessionNode</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -67,6 +82,12 @@
     </ClCompile>
     <ClCompile Include="cWSAData.cpp">
       <Filter>cWSAData</Filter>
+    </ClCompile>
+    <ClCompile Include="cAcceptor.cpp">
+      <Filter>Acceptor</Filter>
+    </ClCompile>
+    <ClCompile Include="iSessionNode.cpp">
+      <Filter>SessionNode</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
