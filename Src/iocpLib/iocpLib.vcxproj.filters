@@ -22,6 +22,9 @@
     <Filter Include="Common\Thread">
       <UniqueIdentifier>{a0142d0a-6ced-4dde-a6ce-1c9d200ab00f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="cWSAData">
+      <UniqueIdentifier>{a5cb396a-6eff-4f02-85c2-f9df9a9a3be1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -48,6 +51,9 @@
     <ClInclude Include="cThreadBase.h">
       <Filter>Common\Thread</Filter>
     </ClInclude>
+    <ClInclude Include="cWSAData.h">
+      <Filter>cWSAData</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -58,6 +64,9 @@
     </ClCompile>
     <ClCompile Include="cThreadBase.cpp">
       <Filter>Common\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="cWSAData.cpp">
+      <Filter>cWSAData</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
