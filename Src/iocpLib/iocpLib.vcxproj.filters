@@ -22,9 +22,6 @@
     <Filter Include="Common\Thread">
       <UniqueIdentifier>{a0142d0a-6ced-4dde-a6ce-1c9d200ab00f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="cWSAData">
-      <UniqueIdentifier>{a5cb396a-6eff-4f02-85c2-f9df9a9a3be1}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Acceptor">
       <UniqueIdentifier>{f7f3afde-75e0-4e37-b4ba-c461735b407f}</UniqueIdentifier>
     </Filter>
@@ -33,6 +30,15 @@
     </Filter>
     <Filter Include="SessionNode">
       <UniqueIdentifier>{b060c754-271a-4919-aa07-41f07937b687}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WorkThread">
+      <UniqueIdentifier>{2ccc6484-4b88-4fd2-8462-5cd4905d7d71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WSAData">
+      <UniqueIdentifier>{a5cb396a-6eff-4f02-85c2-f9df9a9a3be1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Socket">
+      <UniqueIdentifier>{1450cadf-c185-4f6e-987b-56cedab6062b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -61,13 +67,25 @@
       <Filter>Common\Thread</Filter>
     </ClInclude>
     <ClInclude Include="cWSAData.h">
-      <Filter>cWSAData</Filter>
+      <Filter>WSAData</Filter>
     </ClInclude>
     <ClInclude Include="cAcceptor.h">
       <Filter>Acceptor</Filter>
     </ClInclude>
     <ClInclude Include="iSessionNode.h">
       <Filter>SessionNode</Filter>
+    </ClInclude>
+    <ClInclude Include="cOverlappedEx.h">
+      <Filter>Common\OverlappedEx</Filter>
+    </ClInclude>
+    <ClInclude Include="cFunWrapper.h">
+      <Filter>Common\OverlappedEx</Filter>
+    </ClInclude>
+    <ClInclude Include="cSocket.h">
+      <Filter>Common\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="cWorkThread.h">
+      <Filter>WorkThread</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -81,13 +99,22 @@
       <Filter>Common\Thread</Filter>
     </ClCompile>
     <ClCompile Include="cWSAData.cpp">
-      <Filter>cWSAData</Filter>
+      <Filter>WSAData</Filter>
     </ClCompile>
     <ClCompile Include="cAcceptor.cpp">
       <Filter>Acceptor</Filter>
     </ClCompile>
     <ClCompile Include="iSessionNode.cpp">
       <Filter>SessionNode</Filter>
+    </ClCompile>
+    <ClCompile Include="cOverlappedEx.cpp">
+      <Filter>Common\OverlappedEx</Filter>
+    </ClCompile>
+    <ClCompile Include="cSocket.cpp">
+      <Filter>Common\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="cWorkThread.cpp">
+      <Filter>WorkThread</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

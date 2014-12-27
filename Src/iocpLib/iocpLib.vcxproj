@@ -85,9 +85,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cAcceptor.h" />
+    <ClInclude Include="cFunWrapper.h" />
     <ClInclude Include="cIocpHandler.h" />
+    <ClInclude Include="cOverlappedEx.h" />
     <ClInclude Include="cSingleTon.h" />
+    <ClInclude Include="cSocket.h" />
     <ClInclude Include="cThreadBase.h" />
+    <ClInclude Include="cWorkThread.h" />
     <ClInclude Include="cWSAData.h" />
     <ClInclude Include="iocpLib.h" />
     <ClInclude Include="iSessionNode.h" />
@@ -98,7 +102,10 @@
   <ItemGroup>
     <ClCompile Include="cAcceptor.cpp" />
     <ClCompile Include="cIocpHandler.cpp" />
+    <ClCompile Include="cOverlappedEx.cpp" />
+    <ClCompile Include="cSocket.cpp" />
     <ClCompile Include="cThreadBase.cpp" />
+    <ClCompile Include="cWorkThread.cpp" />
     <ClCompile Include="cWSAData.cpp" />
     <ClCompile Include="iSessionNode.cpp" />
     <ClCompile Include="stdafx.cpp">

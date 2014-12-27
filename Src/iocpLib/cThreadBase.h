@@ -1,6 +1,5 @@
 #pragma once
 #include <thread>
-#include <atomic>
 
 // 강제종료는 구현하지 않는다.
 // thread의 강제 종료시에는 각 객체의 해제(소멸자)를 보장할 수 없다. 

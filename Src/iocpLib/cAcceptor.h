@@ -1,11 +1,12 @@
 #pragma once
+#include "cSocket.h"
 
 class iSessionNode;
 
 class cAcceptor
 {
 private:
-    SOCKET  m_socket;
+    cSocket m_socket;
 
 public:
     cAcceptor();
@@ -14,8 +15,9 @@ public:
     bool Init( ushort port, int backlog = SOMAXCONN );
 
     bool AcceptAsync( iSessionNode* session );
-    void AcceptProcess( iSessionNode* session, DWORD errorCode );
+    void AcceptProcess( iSessionNode* session, DWORD bytesTransferred );
+    void AcceptError( iSessionNode* session, DWORD errorCode );
 
-    bool IsSocketCreate() { return m_socket == INVALID_SOCKET; }
+    SOCKET GetSock() { return (SOCKET)m_socket; }
 };
 

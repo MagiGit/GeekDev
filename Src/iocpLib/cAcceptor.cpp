@@ -2,10 +2,10 @@
 #include "cAcceptor.h"
 #include "cIocpHandler.h"
 #include "iSessionNode.h"
+#include <assert.h>
 
 
 cAcceptor::cAcceptor()
-    : m_socket( INVALID_SOCKET )
 {
 }
 
@@ -16,29 +16,53 @@ cAcceptor::~cAcceptor()
 
 bool cAcceptor::Init( ushort port, int backlog )
 {
-    if( IsSocketCreate() != true )
-    {
-        m_socket = socket( AF_INET, SOCK_STREAM, IPPROTO_TCP );
-    }
-
-    if( IsSocketCreate() == false )
-    {
-        return false;
-    }
-
-    SOCKADDR_IN addr;
-    ZeroMemory( &addr, sizeof( addr ) );
-    addr.sin_family = AF_INET;
-    addr.sin_port = htons( port );
-    addr.sin_addr.s_addr = INADDR_ANY;
-    if( bind( m_socket, (LPSOCKADDR)&addr, sizeof( addr ) ) == SOCKET_ERROR )
+    if( m_socket.CreateTCP() == false
+        || m_socket.Bind( port ) == false )
     {
         return false;
     }
 
     // listen함수 호출할때 부터 클라이언트는 접속을 시작한다..(backlog만큼)
     // listen다음엔 바로 accept함수를 호출해줘야 한다.
-    if( listen( m_socket, backlog ) == SOCKET_ERROR )
+    // AcceptEx에서는 SO_CONDITIONAL_ACCEPT 옵션을 사용하여 accept를 막는다.
+
+    bool on = true;
+    if( m_socket.SetOption( SO_CONDITIONAL_ACCEPT, (char*)&on, sizeof(on) ) == false
+        || m_socket.Listen( backlog ) == false )
+    {
+        return false;
+    }
+
+    if( g_iocp.RegistSocket( m_socket, this ) == false )
+    {
+        return false;
+    }
+  
+    return true;
+}
+
+bool cAcceptor::AcceptAsync( iSessionNode* session )
+{
+    if( session == nullptr )
+    {
+        return false;
+    }
+
+    DWORD temp = 0;
+    ZeroMemory( session->GetAcceptOv(), sizeof(OVERLAPPED) );
+
+    BOOL ret = AcceptEx( m_socket, 
+                         session->GetSocket(), 
+                         session->GetBuf(),
+                         0,
+                         cSocket::addrlen+16,
+                         cSocket::addrlen+16,
+                         &temp,
+                         session->GetAcceptOv() );
+
+    DWORD error = GetLastError();
+    if( ret == FALSE 
+        && error != ERROR_IO_PENDING )
     {
         return false;
     }
@@ -46,11 +70,14 @@ bool cAcceptor::Init( ushort port, int backlog )
     return true;
 }
 
-bool AcceptAsync( iSessionNode* session )
+void cAcceptor::AcceptProcess( iSessionNode* session, DWORD bytesTransferred )
 {
-    return true;
+    assert( session );
+    session->AfterAccept();
+    session->RecvAsync();
 }
 
-void AcceptProcess( iSessionNode* session, DWORD errorCode )
+void cAcceptor::AcceptError( iSessionNode* session, DWORD errorCode )
 {
+    std::cout << "AcceptError!! : " << errorCode << std::endl;
 }

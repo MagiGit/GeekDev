@@ -2,6 +2,7 @@
 #include "cWSAData.h"
 #include <assert.h>
 
+int cWSAData::s_refCount = 0;
 
 cWSAData::cWSAData()
 {

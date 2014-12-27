@@ -1,6 +1,6 @@
 #pragma once
 
-#define IOCP    cSingleTon<cIocpHandler>::Get()
+#define g_iocp    cSingleTon<cIocpHandler>::Get()
 
 class cIocpHandler
 {
@@ -31,10 +31,10 @@ public:
         return PostQueuedCompletionStatus( m_iocp, bytesTransferred, key, ov );
     }
 
-    BOOL GQCS( LPDWORD& bytesTransferred, PULONG_PTR& key, LPOVERLAPPED*& ov, DWORD milliSec = INFINITE )
+    BOOL GQCS( DWORD& bytesTransferred, ULONG_PTR& key, LPOVERLAPPED& ov, DWORD milliSec = INFINITE )
     {
         // 역시 할 수 있는게 없어보인다.
-        return GetQueuedCompletionStatus( m_iocp, bytesTransferred, key, ov, milliSec );
+        return GetQueuedCompletionStatus( m_iocp, &bytesTransferred, &key, &ov, milliSec );
     }
 };
 
