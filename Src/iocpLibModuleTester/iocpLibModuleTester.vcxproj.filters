@@ -22,6 +22,9 @@
     <Filter Include="Testers\Thread">
       <UniqueIdentifier>{e3829ecf-ef68-4f26-8937-1ee7ece547a9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Testers\AcceptAndDisconnect">
+      <UniqueIdentifier>{710cb178-8303-4adc-80e7-8af2ce6409ac}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -46,6 +49,9 @@
     </ClCompile>
     <ClCompile Include="Test_Thread.cpp">
       <Filter>Testers\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="Test_AcceptAndDisconnect.cpp">
+      <Filter>Testers\AcceptAndDisconnect</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
